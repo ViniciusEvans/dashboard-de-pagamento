@@ -1,0 +1,31 @@
+@mixin flexBox($direction: row, $justify: center, $align: center, $wrap: wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin textShadow($color: $dark2, $size: 1px, $blur: 3px) {
+    text-shadow: $size $size $blur $color;
+    transition: 0.7s;
+}
+
+@mixin boxShadow($size: 3px, $blur: 3px, $color: $dark-transparent) {
+    box-shadow: $color $size $size $blur;
+    transition: .3s;
+}
+
+@mixin margin($top:0, $bottom: 0, $left: 0, $right: 0) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-left: $left;
+    margin-bottom: $bottom;
+}
+
+@mixin padding($top:0, $bottom: 0, $left: 0, $right: 0) {
+    padding-top: $top;
+    padding-right: $right;
+    padding-left: $left;
+    padding-bottom: $bottom;
+}

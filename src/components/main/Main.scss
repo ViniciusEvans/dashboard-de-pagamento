@@ -1,0 +1,16 @@
+@import './mixins.scss';
+.dashboard {
+    min-height: 100vh;
+    background-color: #FFFF;
+    border-radius: 60px 60px 0px 0px;
+    padding: 46px 105px;
+    .main-section {
+        @include flexBox($direction: row, $justify: flex-start, $align: flex-start, $wrap: wrap);
+        width: 100%;
+        .sub-section {
+            @include flexBox($direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap);
+            width: 68%;
+            margin-right: 30px;
+        }
+    }
+}

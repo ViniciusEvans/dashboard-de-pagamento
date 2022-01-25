@@ -1,0 +1,90 @@
+@import './mixins.scss';
+.modal-container {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    @include flexBox($direction: row, $justify: center, $align: center, $wrap: wrap);
+    .modal-section {
+        @include flexBox($direction: column, $justify: flex-start, $align: flex-start, $wrap: wrap);
+        width: 611px;
+        height: 879px;
+        background-color: #FFFF;
+        box-sizing: border-box;
+        padding: 64px 61px;
+        border-radius: 30px;
+        .modal-section--header {
+            @include flexBox($direction: row, $justify: space-between, $align: flex-start, $wrap: wrap);
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 54px;
+            p {
+                font-weight: bold;
+                font-size: 36px;
+                line-height: 43px;
+                margin: 0;
+            }
+            button {
+                background-color: transparent;
+                border: none;
+            }
+            img {
+                width: 30px;
+            }
+        }
+        .buttons {
+            $padding-btn: 20px 99px;
+            margin-bottom: 38px;
+            .credit-button {
+                all: unset;
+                background: #B9B9B9;
+                border-radius: 0px 10px 10px 0px;
+                padding: $padding-btn;
+            }
+            .debit-button {
+                all: unset;
+                background: #B9B9B9;
+                border-radius: 10px 0px 0px 10px;
+                padding: $padding-btn;
+            }
+        }
+        .transfer-inputs {
+            label {
+                text-align: start;
+                font-size: 24px;
+                line-height: 28px;
+                padding-bottom: 10px;
+            }
+            input {
+                all: unset;
+                width: 100%;
+                height: 63.49px;
+                background: #FFFFFF;
+                border: 1px solid #555555;
+                box-sizing: border-box;
+                border-radius: 5px;
+                padding: 20px;
+                margin-top: 10px;
+                margin-bottom: 26px;
+                &:focus {
+                    border: 1px red solid;
+                }
+            }
+        }
+        div.div-insert {
+            @include flexBox($direction: row, $justify: center, $align: center, $wrap: wrap);
+            width: 100%;
+            margin-top: 10px;
+            cursor: pointer;
+            .btn-insert {
+                all: unset;
+                background: #645FFB;
+                border-radius: 5px;
+                padding: 5px 85px;
+            }
+        }
+    }
+}
